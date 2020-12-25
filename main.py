@@ -14,12 +14,12 @@ def takeshot():
         time.sleep(0.5)
 # img.show()
 
-print("F11키를 누르면 50초간 0.5초마다 스샷을찍어줌")
+print("F12키를 누르면 50초간 0.5초마다 스샷을찍어줌")
 print("저장폴더는 img/lie 폴더임")
 
 
 while 1:
-    if(keyboard.is_pressed('F11')):
+    if(keyboard.is_pressed('F12')):
         takeshot()
-        keyboard.release('F11')
+        keyboard.release('F12')
     time.sleep(0.1)
