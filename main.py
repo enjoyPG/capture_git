@@ -1,16 +1,25 @@
-# This is a sample Python script.
+from PIL import ImageGrab
+import time
+import keyboard
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def takeshot():
+    print('takeshot')
+    for i in range(120):
+        now = time.localtime()
+        ntime = "%04d-%02d-%02d-%02dh-%02dm-%02ds--%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour,now.tm_min, now.tm_sec, i)
+        print(ntime)
+        img = ImageGrab.grab((0, 0, 800, 650))
+        fname = "{}{}".format(ntime, '.png')
+        img.save('./img/lie/' + fname)
+        time.sleep(0.5)
+# img.show()
+
+print("F11키를 누르면 50초간 0.5초마다 스샷을찍어줌")
+print("저장폴더는 img/lie 폴더임")
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+while 1:
+    if(keyboard.is_pressed('F11')):
+        takeshot()
+        keyboard.release('F11')
+    time.sleep(0.1)
