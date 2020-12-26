@@ -4,7 +4,7 @@ import keyboard
 
 def takeshot():
     print('takeshot')
-    for i in range(2):
+    for i in range(120):
         now = time.localtime()
         ntime = "%04d-%02d-%02d-%02dh-%02dm-%02ds--%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour,now.tm_min, now.tm_sec, i)
         print(ntime)
