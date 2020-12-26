@@ -20,7 +20,7 @@ def takeshot():
 # img.show()
 
 print("F12키를 누르면 50초간 0.5초마다 스샷을찍어줌")
-print("저장폴더는 img/lie 폴더임")
+print("저장폴더는 img/lie 폴더, img/lieG 폴더")
 
 
 while 1:
